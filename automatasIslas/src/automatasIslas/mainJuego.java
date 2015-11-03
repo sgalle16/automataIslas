@@ -8,10 +8,11 @@ import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
-public class mainJuego extends JFrame{
+public class mainJuego extends javax.swing.JFrame /*JFrame*/{
+      private String nombre = "";   
      public mainJuego(){
-    //Titulo del juego, por ahora lo llamare A.E.I.O.U.
-    setTitle("A.E.E.O.U");
+        //Titulo del juego, por ahora lo llamare A.E.I.O.U.
+        setTitle("A.E.E.O.U");
 	
 	//CERRAR CON CLICK 
 	setDefaultCloseOperation(EXIT_ON_CLOSE);	
@@ -29,13 +30,34 @@ public class mainJuego extends JFrame{
 	add(new Tablero());
 	
 	setVisible(true);
+        
+        /*
+        try {
+            while (nombre.equals("")) {
+                nombre = JOptionPane.showInputDialog("¿Nombre del Participante?");
+             
+            }
+            //reiniciar(); 
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "ADIOS", "TRIQUISM", JOptionPane.INFORMATION_MESSAGE);
+            System.exit(0);
+        }*/
    
 }
+     /*
      //Este es el main que busca java para poder ejecutar el programa
      public static void main(String args[]){
-    new mainJuego();			
+        new mainJuego().setVisible(true);			
+     }  */
+     
+     
+    public static void main(String args[]) {
+        java.awt.EventQueue.invokeLater(new Runnable() {
 
+            @Override
+            public void run() {
+                new mainJuego().setVisible(true);
+            }
+        });
+    }
 }
-     
-     
- }
