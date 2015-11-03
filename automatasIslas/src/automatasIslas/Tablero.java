@@ -11,14 +11,14 @@ public class Tablero extends JPanel implements Runnable {
     private Thread hilo;
     private Image background;
     //para poner cada imagen de cada cosa que vaya en el juego basta con un private Image nombre_de_la_imagen_en_escena
-    private Image personaje;
-    private Image letra_A;
-    private Image letra_E;
-    private Image letra_I;
-    private Image letra_O;
-    private Image letra_U;
-    private Image suelo_sobre_todo;
-    private Image suelo_cada_letra;
+    private ImageIcon personaje;
+    private ImageIcon letra_A;
+    private ImageIcon letra_E;
+    private ImageIcon letra_I;
+    private ImageIcon letra_O;
+    private ImageIcon letra_U;
+    private ImageIcon suelo_sobre_todo;
+    private ImageIcon suelo_cada_letra;
     private int x_personaje, y_personaje, x_letra_A, y_letra_A, x_letra_E, y_letra_E, x_letra_I, y_letra_I; 
     private int x_letra_O, y_letra_O, x_letra_U, y_letra_U, x_letra_suelo_st, y_letra_suelo_st; 
     private int x_letra_cl_a, y_letra_cl_a,x_letra_cl_e, y_letra_cl_e, x_letra_cl_i, y_letra_cl_i, x_letra_cl_o, y_letra_cl_o,x_letra_cl_u, y_letra_cl_u;
@@ -31,15 +31,14 @@ public class Tablero extends JPanel implements Runnable {
 	setDoubleBuffered(true);
 
 	background = new ImageIcon(this.getClass().getResource(	"/imagenes/nombre_de_el_fondo_de_escena")).getImage();
-	personaje = new ImageIcon(this.getClass().getResource("path_donde_va_personaje").getImage());
-	letra_A = new ImageIcon(this.getClass().getResource("path_donde_va_letra").getImage());
-	letra_E = new ImageIcon(this.getClass().getResource("path_donde_va_letra").getImage());
-	letra_I = new ImageIcon(this.getClass().getResource("path_donde_va_letra").getImage());
-	letra_O = new ImageIcon(this.getClass().getResource("path_donde_va_letra").getImage());
-	letra_U = new ImageIcon(this.getClass().getResource("path_donde_va_letra").getImage());
-	suelo_sobre_todo = new ImageIcon(this.getClass().getResource("path donde va suelo_sobre_todo").getImage());
-	suelo_cada_letra = new ImageIcon(this.getClass().getResource("path_donde_suelo cada letra ").getImage());
-
+	suelo_sobre_todo = new ImageIcon(this.getClass().getResource("path donde va suelo_sobre_todo"));
+	suelo_cada_letra = new ImageIcon(this.getClass().getResource("path_donde_suelo cada letra "));
+	personaje = new ImageIcon(this.getClass().getResource("/imagenes/pj.png"));
+	letra_A =  new ImageIcon(this.getClass().getResource("imagenes/letraA.png"));
+	letra_E = new ImageIcon(this.getClass().getResource("imagenes/letraE.png"));
+	letra_I = new ImageIcon(this.getClass().getResource("imagenes/letraI.png"));
+	letra_O = new ImageIcon(this.getClass().getResource("imagenes/letraO.png"));
+	letra_U = new ImageIcon(this.getClass().getResource("imagenes/letraU.png"));
     };
     
     public void addNotify(){
