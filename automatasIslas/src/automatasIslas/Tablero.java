@@ -9,16 +9,16 @@ import javax.swing.JPanel;
 public class Tablero extends JPanel implements Runnable {
 private interfazInicio inicioInter;
 private Thread hilo;
-private final ImageIcon background;
+private final Image background;
 //para poner cada imagen de cada cosa que vaya en el juego basta con un private Image nombre_de_la_imagen_en_escena
-private final ImageIcon personaje;
-private final ImageIcon letra_A;
-private final ImageIcon letra_E;
-private final ImageIcon letra_I;
-private final ImageIcon letra_O;
-private final ImageIcon letra_U;
-private final ImageIcon suelo_sobre_todo;
-private final ImageIcon suelo_cada_letra;
+private final Image personaje;
+private final Image letra_A;
+private final Image letra_E;
+private final Image letra_I;
+private final Image letra_O;
+private final Image letra_U;
+private final Image suelo_sobre_todo;
+private final Image suelo_cada_letra;
 private int x_personaje, y_personaje, x_letra_A, y_letra_A, x_letra_E, y_letra_E, x_letra_I, y_letra_I; 
 private int x_letra_O, y_letra_O, x_letra_U, y_letra_U, x_letra_suelo_st, y_letra_suelo_st; 
 private int x_letra_cl_a, y_letra_cl_a,x_letra_cl_e, y_letra_cl_e, x_letra_cl_i, y_letra_cl_i, x_letra_cl_o, y_letra_cl_o,x_letra_cl_u, y_letra_cl_u;
@@ -30,21 +30,16 @@ public Tablero(){
 setBackground(Color.WHITE); 
 setDoubleBuffered(true);
 
-background = new ImageIcon(this.getClass().getResource("/automatasIslas.imagenes/fondo.jpg").getFile());
-/*personaje = new ImageIcon(this.getClass().getResource("path_donde_va_personaje").getImage());
-letra_A = new ImageIcon(this.getClass().getResource("/imagenes/pj").getImage());
-letra_E = new ImageIcon(this.getClass().getResource("path_donde_va_letra").getImage());
-letra_I = new ImageIcon(this.getClass().getResource("path_donde_va_letra").getImage());
-letra_O = new ImageIcon(this.getClass().getResource("path_donde_va_letra").getImage());
-letra_U = new ImageIcon(this.getClass().getResource("path_donde_va_letra").getImage());*/
-suelo_sobre_todo = new ImageIcon(this.getClass().getResource("path donde va suelo_sobre_todo"));
-suelo_cada_letra = new ImageIcon(this.getClass().getResource("path_donde_suelo cada letra "));
-personaje = new ImageIcon(this.getClass().getResource("/imagenes/pj.png").getFile());
-letra_A =  new ImageIcon(this.getClass().getResource("imagenes/letraA.png").getFile());
-letra_E = new ImageIcon(this.getClass().getResource("imagenes/letraE.png").getFile());
-letra_I = new ImageIcon(this.getClass().getResource("imagenes/letraI.png").getFile());
-letra_O = new ImageIcon(this.getClass().getResource("imagenes/letraO.png").getFile());
-letra_U = new ImageIcon(this.getClass().getResource("imagenes/letraU.png").getFile());
+background = new ImageIcon(this.getClass().getResource("direccion de la imagen")).getImage();
+suelo_sobre_todo = new ImageIcon(this.getClass().getResource("direccion de la imagen")).getImage();
+suelo_cada_letra = new ImageIcon(this.getClass().getResource("direccion de la imagen")).getImage();
+personaje = new ImageIcon(this.getClass().getResource("direccion de la imagen")).getImage();
+letra_A = new ImageIcon(this.getClass().getResource("direccion de la imagen")).getImage();
+letra_E = new ImageIcon(this.getClass().getResource("direccion de la imagen")).getImage();
+letra_I = new ImageIcon(this.getClass().getResource("direccion de la imagen")).getImage();
+letra_O = new ImageIcon(this.getClass().getResource("direccion de la imagen")).getImage();
+letra_U = new ImageIcon(this.getClass().getResource("direccion de la imagen")).getImage();
+
 //run();
 
 }
