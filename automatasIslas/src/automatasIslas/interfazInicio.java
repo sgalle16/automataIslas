@@ -22,8 +22,8 @@ setBackground(Color.WHITE);
 setDoubleBuffered(true);
 //setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-background1 =  new ImageIcon(this.getClass().getResource("/img/background.jpg")).getImage();
-tituloJuego =  new ImageIcon(this.getClass().getResource(" path donde esta el titulo del juego")).getImage();
+background1 =  new ImageIcon(this.getClass().getResource("direccion de la imagen")).getImage();
+tituloJuego =  new ImageIcon(this.getClass().getResource(" direccion de la imagen")).getImage();
 
 }
 
